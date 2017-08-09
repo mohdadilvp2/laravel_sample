@@ -24,8 +24,8 @@ class CreatePaymentsTable extends Migration
             $table->integer('in_rupees');
             $table->string('paid_date');
             $table->string('paid_to');
-            $table->timestamps();  
-
+            $table->timestamps(); 
+             
              }); 
     }
 
