@@ -17,9 +17,6 @@ class LoginController extends Controller
        $this->request =$request;
     }
     
-
-
-
     /*
        To show login page
        @param $request

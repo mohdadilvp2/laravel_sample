@@ -14,10 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('oo', function () {
-//     return view('errors.503');
+// Route::get('testclientQueries', function () {
+//     return view('testclientQueries');
 // });
 
+Route::get ('usercode', 'UserController@usercode');
+
+Route::get ('pass', 'PasswordResetController@PasswordQueries');
+
+Route::get ('weekly', 'WeeklyHourController@WeeklyHourQueries');
+
+Route::get ('payment', 'PaymentController@PaymentQueries');
+
+Route::get ('user', 'UserController@UserQueries');
+
+Route::get ('testClient', 'ClientController@testclientQueries');
+
+Route::get ('ExpenseTest', 'ExpenseController@ExpenseQueries');
 
 Route::get ('login', 'LoginController@login');
 
