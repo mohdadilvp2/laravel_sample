@@ -15,7 +15,7 @@ class AddForeignAtToExpenseTable extends Migration
     {
         Schema::table('expense', function (Blueprint $table) {
              $table->integer('paid_by')->unsigned()->change();
-             $table->foreign('paid_by')->references('id')->on('users');
+             $table->foreign('paid_by')->references('user_id')->on('users');
         });
     }
 

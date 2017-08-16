@@ -17,7 +17,7 @@ class AddForeignAtToPaymentsTable extends Migration
              $table->integer('client_Id')->unsigned()->change();
              $table->foreign('client_Id')->references('client_id')->on('clients');
              $table->integer('paid_to')->unsigned()->change();
-             $table->foreign('paid_to')->references('id')->on('users');
+             $table->foreign('paid_to')->references('user_id')->on('users');
              $table->float('hours')->nullable()->change();
              $table->float('weekly_hour_Ids')->nullable()->change();
         });

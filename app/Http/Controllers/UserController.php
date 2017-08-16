@@ -16,6 +16,7 @@ class UserController extends Controller
 	}
 
 	public function UserQueries(){
+		
 		// $expense = new Expense;
 
 		// $expense->paid_to='aaa';
@@ -42,8 +43,10 @@ class UserController extends Controller
 
 public function usercode(){
 
+	$books = User :: with('expense')->get();
+
 	$s = User :: find(1) -> expense;
-	print_r($s);exit;
+	print_r($books);exit;
 }
 }
 

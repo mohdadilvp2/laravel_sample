@@ -22,7 +22,7 @@ class User extends Authenticatable
      *
      * @var string
      */
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'user_id';
 
      /**
      * The attributes that are mass assignable.

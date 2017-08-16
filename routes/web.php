@@ -26,7 +26,7 @@ Route::get ('weekly', 'WeeklyHourController@WeeklyHourQueries');
 
 Route::get ('payment', 'PaymentController@PaymentQueries');
 
-Route::get ('user', 'UserController@UserQueries');
+Route::get ('UserQueries', 'UserController@UserQueries');
 
 Route::get ('testClient', 'ClientController@testclientQueries');
 
