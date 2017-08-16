@@ -32,9 +32,15 @@ Route::get ('testClient', 'ClientController@testclientQueries');
 
 Route::get ('ExpenseTest', 'ExpenseController@ExpenseQueries');
 
-Route::get ('login', 'LoginController@login');
+/*
 
-Route::post ('login', 'LoginController@store');
+*/
+Auth::routes();
 
+Route::group(['middleware' => 'auth'], function () {
 
+   Route::get('/home', 'HomeController@index');
+ 
+   Route::get('/dashboard', 'HomeController@dash');
 
+});
