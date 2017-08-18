@@ -33,26 +33,25 @@ public function testclientQueries() {
 
 ////////////////////////mass assignment insertion///////////////////////////////////////////////
 
-     // $Client = Client  :: create([
-     //    'name' => 'test name',
-     //    'description' => 'test description',
-     //    'weekly_hour' => '10',
-     //    'hourly_rate' =>'10',
-     //    'skype' => 'test_test',
-     //    'email' => 'tst@gmail.com'
+     $Client = Client  :: create([
+        'name' => 'test name',
+        'description' => 'test description 2',
+        'weekly_hour' => '10',
+        'hourly_rate' =>'10',
+        'skype' => 'test_test',
+        'email' => 'tst@gmail.com'
                         
 
-     //    ]);
+        ]);
 
 ///////////////////////////////////////selection fron DB//////////////////////////////////////
 
-    // $clients = Client::
-    // where('name', 'test name')->
-               // ->orderBy('name', 'desc')
-               // ->take(10)
-               // all();
-               // print_r($clients);exit;
+    
+               
+// $clients = Client :: get();
 
+
+// print_r($clients);exit;
 
 //////////////////////////////////////////////////update DB///////////////////////////////////
 
@@ -64,8 +63,8 @@ public function testclientQueries() {
 
      
 
-     Client::where('client_id',3)->
-     delete();
+     // Client::where('client_id',3)->
+     // delete();
    
 
 }
