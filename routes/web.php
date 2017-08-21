@@ -20,11 +20,22 @@ Route::get('/', function () {
 
 Route::get ('usercode', 'UserController@usercode');
 
+
+
+
+
 Route::get ('pass', 'PasswordResetController@PasswordQueries');
 
-Route::get ('weekly', 'WeeklyHourController@WeeklyHourQueries');
-
 Route::get ('payment', 'PaymentController@PaymentQueries');
+
+
+
+
+
+
+
+
+
 
 Route::get ('user', 'UserController@UserQueries');
 
@@ -32,9 +43,25 @@ Route::get ('testClient', 'ClientController@testclientQueries');
 
 Route::get ('ExpenseTest', 'ExpenseController@ExpenseQueries');
 
-Route::get ('login', 'LoginController@login');
+/*
 
-Route::post ('login', 'LoginController@store');
+*/
+Auth::routes();
 
+Route::group(['middleware' => 'auth'], function () {
 
+   Route::get('/home', 'HomeController@index');
+ 
+   Route::get('/dashboard', 'HomeController@dash');
 
+   Route::get('weekly-hours', 'WeeklyHourController@showAll')->name('weekly-hours-listings');
+
+   Route::get('weekly-hours/create', 'WeeklyHourController@create')->name('weekly-hours-create');
+
+   Route::post('weekly-hours/store', 'WeeklyHourController@store')->name('weekly-hours-store');
+
+   Route::get('weekly-hours/edit/{id}', 'WeeklyHourController@edit')->name('weekly-hours-edit');
+
+    Route::post('weekly-hours/update', 'WeeklyHourController@update')->name('weekly-hours-update');
+
+});
